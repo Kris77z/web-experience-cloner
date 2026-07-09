@@ -1,6 +1,6 @@
 # Contributing
 
-欢迎改进 `web-experience-cloner`。请优先保持 skill 对 Codex 友好：少解释常识，多保留可执行流程、验证门禁和可复用脚本。
+欢迎改进 `web-experience-cloner`。请优先保持 skill 对 AI agent 友好：少解释常识，多保留可执行流程、验证门禁和可复用脚本。
 
 ## 提交前检查
 
@@ -20,7 +20,7 @@ node scripts/validate-skill.mjs
 - `SKILL.md` 保持精简；长细节放入一层 `references/`。
 - 可重复执行或容易出错的流程放入 `scripts/`。
 - 不要在 skill 目录内放 README/安装指南/变更日志；这些应放在仓库顶层。
-- 更新 `SKILL.md` 后，确认 `agents/openai.yaml` 的显示名称、短描述和默认提示仍然匹配。
+- 更新 `SKILL.md` 后，确认 `agents/openai.yaml` 这类兼容元数据的显示名称、短描述和默认提示仍然匹配。
 
 ## 法律与伦理边界
 

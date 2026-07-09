@@ -116,11 +116,11 @@ function checkSkill() {
 
   const agentsYaml = path.join(skillDir, "agents/openai.yaml")
   if (!fs.existsSync(agentsYaml)) {
-    warnings.push(`${skillName}: missing agents/openai.yaml UI metadata`)
+    warnings.push(`${skillName}: missing optional agent UI metadata at agents/openai.yaml`)
   } else {
     const yaml = read(agentsYaml)
     for (const key of ["display_name", "short_description", "default_prompt"]) {
-      if (!yaml.includes(`${key}:`)) errors.push(`${skillName}: agents/openai.yaml missing ${key}`)
+      if (!yaml.includes(`${key}:`)) errors.push(`${skillName}: agent UI metadata missing ${key}`)
     }
     if (!yaml.includes(`$${skillName}`)) {
       errors.push(`${skillName}: default_prompt should mention $${skillName}`)

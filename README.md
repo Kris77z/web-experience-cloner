@@ -1,18 +1,21 @@
 # Web Experience Cloner
 
-`web-experience-cloner` 是一个 Codex skill，用于逆向、复刻、离线化和重写复杂 Web 体验。
+`web-experience-cloner` 是一个通用 AI agent skill，用于逆向、复刻、离线化和重写复杂 Web 体验。
 它覆盖 WebGL/Three.js/Rive 创意站、Framer/Webflow 平台导出站，以及
 React Router/Remix/Oxygen/Next/Nuxt SSR/SPA 体验页。
 
 ## 安装
 
-从 GitHub 安装：
+核心入口是 `skills/web-experience-cloner/SKILL.md`。任何支持 `SKILL.md` 风格技能目录的
+agent 都可以读取并使用这套工作流。
+
+兼容 skills CLI 的安装方式：
 
 ```bash
 npx skills add https://github.com/Kris77z/web-experience-cloner --skill web-experience-cloner
 ```
 
-也可以把 `skills/web-experience-cloner` 复制到本机 Codex skills 目录：
+也可以把 `skills/web-experience-cloner` 复制到目标 agent 的 skills 目录。Codex 用户可使用：
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
