@@ -1,0 +1,21 @@
+# This workspace contains many local reverse-engineering and clone artifacts.
+# Keep the open-source repo allow-listed to the reusable skills and top-level docs.
+*
+
+!/.gitignore
+!/README.md
+!/LICENSE
+!/CONTRIBUTING.md
+!/SECURITY.md
+
+!/.github/
+!/.github/workflows/
+!/.github/workflows/validate.yml
+
+!/scripts/
+!/scripts/validate-skills.mjs
+
+!/skills/
+!/skills/web-experience-cloner/
+!/skills/web-experience-cloner/**
+

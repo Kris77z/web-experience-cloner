@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Experience Cloner"
+  short_description: "Clone complex web experiences locally"
+  default_prompt: "Use $web-experience-cloner to classify a target site, build an L2 local mirror, and report resource closure."
