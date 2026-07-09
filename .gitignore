@@ -1,5 +1,5 @@
 # This workspace contains many local reverse-engineering and clone artifacts.
-# Keep the open-source repo allow-listed to the reusable skills and top-level docs.
+# Keep the open-source repo allow-listed to the web-experience-cloner skill and top-level docs.
 *
 
 !/.gitignore
@@ -13,9 +13,8 @@
 !/.github/workflows/validate.yml
 
 !/scripts/
-!/scripts/validate-skills.mjs
+!/scripts/validate-skill.mjs
 
 !/skills/
 !/skills/web-experience-cloner/
 !/skills/web-experience-cloner/**
-

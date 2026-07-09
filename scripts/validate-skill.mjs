@@ -3,21 +3,12 @@ import fs from "node:fs"
 import path from "node:path"
 
 const root = process.cwd()
-const skillsDir = path.join(root, "skills")
+const skillDir = path.join(root, "skills/web-experience-cloner")
 const errors = []
 const warnings = []
 
 function read(file) {
   return fs.readFileSync(file, "utf8")
-}
-
-function listDirs(dir) {
-  if (!fs.existsSync(dir)) return []
-  return fs
-    .readdirSync(dir, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => path.join(dir, entry.name))
-    .sort()
 }
 
 function walk(dir, out = []) {
@@ -75,8 +66,8 @@ function checkRepoFiles() {
   }
 }
 
-function checkSkill(skillDir) {
-  const skillName = path.basename(skillDir)
+function checkSkill() {
+  const skillName = "web-experience-cloner"
   const skillMd = path.join(skillDir, "SKILL.md")
   if (!fs.existsSync(skillMd)) {
     errors.push(`${skillName}: missing SKILL.md`)
@@ -143,12 +134,7 @@ function checkSkill(skillDir) {
 }
 
 checkRepoFiles()
-
-for (const skillDir of listDirs(skillsDir)) {
-  checkSkill(skillDir)
-}
-
-if (!listDirs(skillsDir).length) errors.push("No skills found under skills/")
+checkSkill()
 
 for (const warning of warnings) console.warn(`WARN ${warning}`)
 for (const error of errors) console.error(`ERROR ${error}`)
@@ -158,5 +144,4 @@ if (errors.length) {
   process.exit(1)
 }
 
-console.log(`Validation passed: ${listDirs(skillsDir).length} skill(s), ${warnings.length} warning(s).`)
-
+console.log(`Validation passed: web-experience-cloner, ${warnings.length} warning(s).`)

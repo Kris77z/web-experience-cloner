@@ -1,11 +1,11 @@
 # Contributing
 
-欢迎改进这个 skills 仓库。请优先保持 skill 对 Codex 友好：少解释常识，多保留可执行流程、验证门禁和可复用脚本。
+欢迎改进 `web-experience-cloner`。请优先保持 skill 对 Codex 友好：少解释常识，多保留可执行流程、验证门禁和可复用脚本。
 
 ## 提交前检查
 
 ```bash
-node scripts/validate-skills.mjs
+node scripts/validate-skill.mjs
 ```
 
 请不要提交：
@@ -16,7 +16,7 @@ node scripts/validate-skills.mjs
 
 ## Skill 编写约定
 
-- 每个 skill 必须有 `SKILL.md`，frontmatter 至少包含 `name` 和 `description`。
+- `skills/web-experience-cloner/SKILL.md` 的 frontmatter 至少包含 `name` 和 `description`。
 - `SKILL.md` 保持精简；长细节放入一层 `references/`。
 - 可重复执行或容易出错的流程放入 `scripts/`。
 - 不要在 skill 目录内放 README/安装指南/变更日志；这些应放在仓库顶层。
@@ -26,4 +26,3 @@ node scripts/validate-skills.mjs
 
 Web 复刻 skill 只能帮助本地研究、调试和学习。贡献示例时不要包含受版权保护的目标站点资源，
 也不要引导用户公开部署第三方站点副本。
-

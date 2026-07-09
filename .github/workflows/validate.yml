@@ -1,4 +1,4 @@
-name: Validate skills
+name: Validate web-experience-cloner
 
 on:
   pull_request:
@@ -13,4 +13,4 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: "24"
-      - run: node scripts/validate-skills.mjs
+      - run: node scripts/validate-skill.mjs

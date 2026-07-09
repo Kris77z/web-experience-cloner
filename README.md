@@ -1,20 +1,15 @@
-# Codex Skills
+# Web Experience Cloner
 
-这个仓库收录可复用的 Codex skills。目前核心 skill 是
-`web-experience-cloner`：用于逆向、复刻、离线化和重写复杂 Web 体验。
-
-## Skills
-
-| Skill | 用途 |
-| --- | --- |
-| `web-experience-cloner` | 高保真 Web 体验复刻工作流，覆盖 WebGL/Three.js/Rive 创意站、Framer/Webflow 平台导出站，以及 React Router/Remix/Oxygen/Next/Nuxt SSR/SPA 体验页。 |
+`web-experience-cloner` 是一个 Codex skill，用于逆向、复刻、离线化和重写复杂 Web 体验。
+它覆盖 WebGL/Three.js/Rive 创意站、Framer/Webflow 平台导出站，以及
+React Router/Remix/Oxygen/Next/Nuxt SSR/SPA 体验页。
 
 ## 安装
 
-从 GitHub 安装指定 skill：
+从 GitHub 安装：
 
 ```bash
-npx skills add <repo-url> --skill web-experience-cloner
+npx skills add https://github.com/Kris77z/web-experience-cloner --skill web-experience-cloner
 ```
 
 也可以把 `skills/web-experience-cloner` 复制到本机 Codex skills 目录：
@@ -24,9 +19,9 @@ mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
 cp -R skills/web-experience-cloner "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
-## Web Experience Cloner
+## 工作流
 
-`web-experience-cloner` 是一个端到端工作流：
+这个 skill 使用端到端线索驱动工作流：
 
 ```text
 CLASSIFY -> ATTRIBUTE -> LOCK -> TRACE -> MIRROR/REPLAY -> VERIFY
@@ -57,14 +52,13 @@ CLASSIFY -> ATTRIBUTE -> LOCK -> TRACE -> MIRROR/REPLAY -> VERIFY
 发布前运行：
 
 ```bash
-node scripts/validate-skills.mjs
+node scripts/validate-skill.mjs
 ```
 
 这个脚本会检查 skill frontmatter、目录结构、缺失引用、过大文件，以及 skill 目录内不适合发布的 README 等。
 
 ## 版权与使用边界
 
-这个仓库的 skill 代码和文档按 MIT 许可开源。使用 skill 复刻第三方网站时，请遵守目标站点的版权、
+这个仓库的代码和文档按 MIT 许可开源。使用 skill 复刻第三方网站时，请遵守目标站点的版权、
 服务条款和当地法律。L2/L3 通常会运行或镜像目标站点自己的压缩代码和资源，仅适合本地学习研究，
 不要把第三方站点副本公开部署或再分发。
-
